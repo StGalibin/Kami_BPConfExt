@@ -809,6 +809,9 @@
 									<Width>10</Width>
 									<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="ТоварыКоличествоExtendedTooltip" id="196"/>
+									<Events>
+										<Event name="OnChange" callType="After">РасшСН_ТоварыКоличествоПриИзмененииПосле</Event>
+									</Events>
 								</InputField>
 								<ColumnGroup name="ТоварыГруппаЦена" id="545">
 									<Title>
@@ -825,18 +828,21 @@
 									</ToolTip>
 									<ExtendedTooltip name="ТоварыГруппаЦенаРасширеннаяПодсказка" id="546"/>
 									<ChildItems>
-										<InputField name="ТоварыЦенаВХ" id="547">
-											<DataPath>Объект.Товары.ЦенаВХ</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыЦенаВХКонтекстноеМеню" id="548"/>
-											<ExtendedTooltip name="ТоварыЦенаВХРасширеннаяПодсказка" id="549"/>
-										</InputField>
 										<InputField name="ТоварыЦена" id="48">
 											<DataPath>Объект.Товары.Цена</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
 											<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="49"/>
 											<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="197"/>
+										</InputField>
+										<InputField name="ТоварыЦенаВХ" id="547">
+											<DataPath>Объект.Товары.ЦенаВХ</DataPath>
+											<Enabled>false</Enabled>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<TextColor>style:ButtonBorderColor</TextColor>
+											<ContextMenu name="ТоварыЦенаВХКонтекстноеМеню" id="548"/>
+											<ExtendedTooltip name="ТоварыЦенаВХРасширеннаяПодсказка" id="549"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -855,18 +861,21 @@
 									</ToolTip>
 									<ExtendedTooltip name="ТоварыГруппаСуммаРасширеннаяПодсказка" id="551"/>
 									<ChildItems>
-										<InputField name="ТоварыСуммаВХ" id="552">
-											<DataPath>Объект.Товары.СуммаВХ</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="553"/>
-											<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="554"/>
-										</InputField>
 										<InputField name="ТоварыСумма" id="50">
 											<DataPath>Объект.Товары.Сумма</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
 											<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="51"/>
 											<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="198"/>
+										</InputField>
+										<InputField name="ТоварыСуммаВХ" id="552">
+											<DataPath>Объект.Товары.СуммаВХ</DataPath>
+											<Enabled>false</Enabled>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<TextColor>style:ButtonBorderColor</TextColor>
+											<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="553"/>
+											<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="554"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -893,7 +902,10 @@
 										</InputField>
 										<InputField name="ТоварыСуммаНаценки" id="557">
 											<DataPath>Объект.Товары.СуммаНаценки</DataPath>
+											<Enabled>false</Enabled>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
+											<TextColor>style:ButtonBorderColor</TextColor>
 											<ContextMenu name="ТоварыСуммаНаценкиКонтекстноеМеню" id="558"/>
 											<ExtendedTooltip name="ТоварыСуммаНаценкиРасширеннаяПодсказка" id="559"/>
 										</InputField>
@@ -2038,7 +2050,7 @@
 					<v8:content>Заполнить входящие цены</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action callType="Override">РасшСН_ЗаполнитьВходящиеЦеныВместо</Action>
+			<Action callType="Override">РасшСН_ЗаполнитьВходящиеЦены</Action>
 		</Command>
 		<Command name="ЗаполнитьВсеИПересчитать" id="10">
 			<Title>
@@ -2053,7 +2065,7 @@
 					<v8:content>Заполнить все и пересчитать</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action callType="After">РасшСН_ЗаполнитьВсеИПересчитатьПосле</Action>
+			<Action callType="Override">РасшСН_ЗаполнитьВсеИПересчитать</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.4">

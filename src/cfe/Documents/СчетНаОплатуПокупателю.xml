@@ -148,6 +148,15 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="4c706b02-b392-4d34-9433-7b74133e1617">
+				<Properties>
+					<Name>Склад</Name>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="1d187e05-7e26-4bc6-9c26-d67f9328ea7c">
 				<InternalInfo>
