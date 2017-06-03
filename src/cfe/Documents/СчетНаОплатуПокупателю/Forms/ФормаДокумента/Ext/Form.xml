@@ -633,6 +633,37 @@
 												<CommandName>Form.Command.ИзменитьТовары</CommandName>
 												<ExtendedTooltip name="ИзменитьТоварыРасширеннаяПодсказка" id="258"/>
 											</Button>
+											<Popup name="ВходящиеЦены" id="563">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Входящие цены</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Входящие цены</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ВходящиеЦеныРасширеннаяПодсказка" id="564"/>
+												<ChildItems>
+													<Button name="ТоварыЗаполнитьВходящиеЦены" id="565">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьВходящиеЦены</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ТоварыЗаполнитьВходящиеЦеныРасширеннаяПодсказка" id="566"/>
+													</Button>
+													<Button name="ТоварыЗаполнитьВсеИПересчитать" id="567">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьВсеИПересчитать</CommandName>
+														<ExtendedTooltip name="ТоварыЗаполнитьВсеИПересчитатьРасширеннаяПодсказка" id="568"/>
+													</Button>
+												</ChildItems>
+											</Popup>
 										</ChildItems>
 									</ButtonGroup>
 									<ButtonGroup name="ТоварыКнопкиКоманднойПанели" id="292">
@@ -1993,6 +2024,36 @@
 					<v8:content>Проверить контрагентов</v8:content>
 				</v8:item>
 			</ToolTip>
+		</Command>
+		<Command name="ЗаполнитьВходящиеЦены" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить входящие цены</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="Override">РасшСН_ЗаполнитьВходящиеЦеныВместо</Action>
+		</Command>
+		<Command name="ЗаполнитьВсеИПересчитать" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить все и пересчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить все и пересчитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">РасшСН_ЗаполнитьВсеИПересчитатьПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.4">
