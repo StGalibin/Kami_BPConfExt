@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<InformationRegister uuid="82e4cde7-61cb-4652-8b23-781e8fd4602d">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.ХранилищеДанныхОбъектовРасширений" category="Record">
+				<xr:TypeId>1427da14-da6b-4db8-b3a0-7a2239859953</xr:TypeId>
+				<xr:ValueId>d6f072dc-1e00-48c8-89ce-06a0b33e5bc9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.ХранилищеДанныхОбъектовРасширений" category="Manager">
+				<xr:TypeId>10867072-8313-4a51-b80f-51f13da710ed</xr:TypeId>
+				<xr:ValueId>ae76dea2-7e6c-40f5-92d7-226ed216eba2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.ХранилищеДанныхОбъектовРасширений" category="Selection">
+				<xr:TypeId>b36af417-560e-40ef-b4dd-508d7c7b0b93</xr:TypeId>
+				<xr:ValueId>c8028c00-1fd0-4e3f-935b-0b52dd0ddc1d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.ХранилищеДанныхОбъектовРасширений" category="List">
+				<xr:TypeId>b6c33ee7-e9fc-4263-b434-17caaa39c23c</xr:TypeId>
+				<xr:ValueId>54d44db6-5680-4339-8c34-6de4c2e79f61</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.ХранилищеДанныхОбъектовРасширений" category="RecordSet">
+				<xr:TypeId>3b6175db-5336-41ab-956a-7a91128c66fc</xr:TypeId>
+				<xr:ValueId>b13480ed-0153-4363-baec-ca7d9d811759</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.ХранилищеДанныхОбъектовРасширений" category="RecordKey">
+				<xr:TypeId>26004376-445c-424a-9b35-cf49275470b7</xr:TypeId>
+				<xr:ValueId>aae4f1f8-dc41-4b14-ba87-e6da06af2109</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.ХранилищеДанныхОбъектовРасширений" category="RecordManager">
+				<xr:TypeId>e4e5e385-ec4f-4498-b992-797559abb3a9</xr:TypeId>
+				<xr:ValueId>64b93559-3587-4929-a092-4fdb997a8a32</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ХранилищеДанныхОбъектовРасширений</Name>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="3b37ad63-ea7f-4b78-9637-f4eaa1e512f0">
+				<Properties>
+					<Name>Данные</Name>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Type>
+						<v8:Type>v8:ValueStorage</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="a32d55eb-e6c0-4e13-9500-747b0791b041">
+				<Properties>
+					<Name>Владелец</Name>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

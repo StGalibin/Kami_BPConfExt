@@ -152,6 +152,10 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">РасшСН_ПриСозданииНаСервереПосле</Event>
+		<Event name="OnWriteAtServer" callType="After">РасшСН_ПриЗаписиНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ПредупреждениеОЗаполненииРеквизитовСчета" id="514">
 			<Visible>false</Visible>
@@ -832,6 +836,7 @@
 											<DataPath>Объект.Товары.Цена</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="49"/>
 											<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="197"/>
 											<Events>
@@ -840,12 +845,12 @@
 										</InputField>
 										<InputField name="ТоварыЦенаВХ" id="547">
 											<DataPath>Объект.Товары.ЦенаВХ</DataPath>
-											<Enabled>false</Enabled>
-											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
-											<TextColor>style:ButtonBorderColor</TextColor>
 											<ContextMenu name="ТоварыЦенаВХКонтекстноеМеню" id="548"/>
 											<ExtendedTooltip name="ТоварыЦенаВХРасширеннаяПодсказка" id="549"/>
+											<Events>
+												<Event name="OnChange" callType="Override">РасшСН_ТоварыЦенаВХПриИзмененииВместо</Event>
+											</Events>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>

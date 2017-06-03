@@ -103,6 +103,7 @@
 			<Enum>ВидыОперацийРеализацияТоваров</Enum>
 			<Enum>ВидыДоговоровКонтрагентов</Enum>
 			<Enum>ВидыЭД</Enum>
+			<InformationRegister>ХранилищеДанныхОбъектовРасширений</InformationRegister>
 			<ChartOfAccounts>Хозрасчетный</ChartOfAccounts>
 		</ChildObjects>
 	</Configuration>
