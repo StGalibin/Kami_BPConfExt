@@ -164,6 +164,10 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">РасшСН_ПриСозданииНаСервереПосле</Event>
+		<Event name="OnWriteAtServer" callType="After">РасшСН_ПриЗаписиНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ПредупреждениеОЗаполненииРеквизитовСчета" id="617">
 			<Visible>false</Visible>
@@ -530,6 +534,37 @@
 								<CommandName>Form.Command.ИзменитьТовары</CommandName>
 								<ExtendedTooltip name="ТоварыИзменитьТоварыExtendedTooltip" id="433"/>
 							</Button>
+							<Popup name="ВходящиеЦены" id="674">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Входящие цены</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Входящие цены</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ВходящиеЦеныРасширеннаяПодсказка" id="675"/>
+								<ChildItems>
+									<Button name="ТоварыЗаполнитьВходящиеЦены" id="676">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьВходящиеЦены</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТоварыЗаполнитьВходящиеЦеныРасширеннаяПодсказка" id="677"/>
+									</Button>
+									<Button name="ТоварыЗаполнитьВсеИПересчитать" id="678">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьВсеИПересчитать</CommandName>
+										<ExtendedTooltip name="ТоварыЗаполнитьВсеИПересчитатьРасширеннаяПодсказка" id="679"/>
+									</Button>
+								</ChildItems>
+							</Popup>
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ТоварыКнопкиКоманднойПанели" id="537">
@@ -704,6 +739,9 @@
 					<Width>10</Width>
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="74"/>
 					<ExtendedTooltip name="ТоварыКоличествоExtendedTooltip" id="442"/>
+					<Events>
+						<Event name="OnChange" callType="After">РасшСН_ТоварыКоличествоПриИзмененииПосле</Event>
+					</Events>
 				</InputField>
 				<ColumnGroup name="ТоварыГруппаЦена" id="656">
 					<Title>
@@ -720,18 +758,25 @@
 					</ToolTip>
 					<ExtendedTooltip name="ТоварыГруппаЦенаРасширеннаяПодсказка" id="657"/>
 					<ChildItems>
+						<InputField name="ТоварыЦена" id="81">
+							<DataPath>Объект.Товары.Цена</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="443"/>
+							<Events>
+								<Event name="OnChange" callType="After">РасшСН_ТоварыЦенаПриИзмененииПосле</Event>
+							</Events>
+						</InputField>
 						<InputField name="ТоварыЦенаВХ" id="658">
 							<DataPath>Объект.Товары.ЦенаВХ</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="ТоварыЦенаВХКонтекстноеМеню" id="659"/>
 							<ExtendedTooltip name="ТоварыЦенаВХРасширеннаяПодсказка" id="660"/>
-						</InputField>
-						<InputField name="ТоварыЦена" id="81">
-							<DataPath>Объект.Товары.Цена</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<Width>10</Width>
-							<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="82"/>
-							<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="443"/>
+							<Events>
+								<Event name="OnChange" callType="Override">РасшСН_ТоварыЦенаВХПриИзмененииВместо</Event>
+							</Events>
 						</InputField>
 					</ChildItems>
 				</ColumnGroup>
@@ -750,18 +795,21 @@
 					</ToolTip>
 					<ExtendedTooltip name="ТоварыГруппаСуммаРасширеннаяПодсказка" id="670"/>
 					<ChildItems>
-						<InputField name="ТоварыСуммаВХ" id="671">
-							<DataPath>Объект.Товары.СуммаВХ</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="672"/>
-							<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="673"/>
-						</InputField>
 						<InputField name="ТоварыСумма" id="83">
 							<DataPath>Объект.Товары.Сумма</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<Width>10</Width>
 							<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="444"/>
+						</InputField>
+						<InputField name="ТоварыСуммаВХ" id="671">
+							<DataPath>Объект.Товары.СуммаВХ</DataPath>
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<TextColor>style:ButtonBorderColor</TextColor>
+							<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="672"/>
+							<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="673"/>
 						</InputField>
 					</ChildItems>
 				</ColumnGroup>
@@ -785,10 +833,16 @@
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="ТоварыПроцентНаценкиКонтекстноеМеню" id="664"/>
 							<ExtendedTooltip name="ТоварыПроцентНаценкиРасширеннаяПодсказка" id="665"/>
+							<Events>
+								<Event name="OnChange" callType="Override">РасшСН_ТоварыПроцентНаценкиПриИзмененииВместо</Event>
+							</Events>
 						</InputField>
 						<InputField name="ТоварыСуммаНаценки" id="666">
 							<DataPath>Объект.Товары.СуммаНаценки</DataPath>
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
 							<EditMode>EnterOnInput</EditMode>
+							<TextColor>style:ButtonBorderColor</TextColor>
 							<ContextMenu name="ТоварыСуммаНаценкиКонтекстноеМеню" id="667"/>
 							<ExtendedTooltip name="ТоварыСуммаНаценкиРасширеннаяПодсказка" id="668"/>
 						</InputField>
@@ -2021,6 +2075,36 @@
 			<FunctionalOptions>
 				<Item>FunctionalOption.ИспользоватьКонтрольныеЗнакиГИСМ</Item>
 			</FunctionalOptions>
+		</Command>
+		<Command name="ЗаполнитьВсеИПересчитать" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить все и пересчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить все и пересчитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="Override">РасшСН_ЗаполнитьВсеИПересчитать</Action>
+		</Command>
+		<Command name="ЗаполнитьВходящиеЦены" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить входящие цены</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="Override">РасшСН_ЗаполнитьВходящиеЦены</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.4">
