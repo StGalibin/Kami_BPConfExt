@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Enum uuid="3e8b8382-f054-421a-accf-e4fb9fb91352">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыДоговоровКонтрагентов" category="Ref">
+				<xr:TypeId>1c7f23ea-4f65-4ace-9ddb-36d52c261010</xr:TypeId>
+				<xr:ValueId>9a971387-0873-41b9-9ff0-71946cc5c713</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыДоговоровКонтрагентов" category="Manager">
+				<xr:TypeId>ff6eba78-6503-4ecd-86fe-702c4711fac3</xr:TypeId>
+				<xr:ValueId>50b8376f-3cca-48fd-96fa-6cd3cec92626</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыДоговоровКонтрагентов" category="List">
+				<xr:TypeId>8311b66e-ad0e-460f-9ae2-7fa524c5806a</xr:TypeId>
+				<xr:ValueId>3ef51707-8c94-4ff3-9c21-2b75b9375ea5</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыДоговоровКонтрагентов</Name>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="2052b066-152e-4a79-9add-7b18b6233947">
+				<Properties>
+					<Name>СПокупателем</Name>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

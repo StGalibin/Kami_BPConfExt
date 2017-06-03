@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<ChartOfAccounts uuid="e0143d64-d3aa-4e72-bd50-90a7e025ed7d">
+		<InternalInfo>
+			<xr:GeneratedType name="ChartOfAccountsObject.Хозрасчетный" category="Object">
+				<xr:TypeId>365c66b0-e776-4b1f-8382-84098281882e</xr:TypeId>
+				<xr:ValueId>f7650d5a-6ff4-4312-83c6-a0e2d9314c93</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsRef.Хозрасчетный" category="Ref">
+				<xr:TypeId>2175db6e-8f2a-44f3-b5a4-f64629fbd054</xr:TypeId>
+				<xr:ValueId>fdef727a-d7ed-4bc4-a08c-3291bd4e153e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsSelection.Хозрасчетный" category="Selection">
+				<xr:TypeId>f0e1b4bb-186f-46c1-9df1-d91e7951c107</xr:TypeId>
+				<xr:ValueId>20abb005-36a0-4e88-a2e9-14df30beaced</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsList.Хозрасчетный" category="List">
+				<xr:TypeId>7ebdc942-d75c-4078-aa43-cd39f0ae4feb</xr:TypeId>
+				<xr:ValueId>d1eff7b0-bc2a-4fe9-8327-cc04880dd4c5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsManager.Хозрасчетный" category="Manager">
+				<xr:TypeId>7f4c0e92-5e58-49cc-b97b-111268ba199a</xr:TypeId>
+				<xr:ValueId>25f28117-5a23-452c-b9c2-bc1bf32c137f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsExtDimensionTypes.Хозрасчетный" category="ExtDimensionTypes">
+				<xr:TypeId>554612bc-76ac-491a-b3b2-8eebfeebfd6e</xr:TypeId>
+				<xr:ValueId>ce2b7773-f68c-46c8-88d1-131ce0097a99</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ChartOfAccountsExtDimensionTypesRow.Хозрасчетный" category="ExtDimensionTypesRow">
+				<xr:TypeId>90b318b7-a38e-45ee-bf4b-e13b52e86e2d</xr:TypeId>
+				<xr:ValueId>3185700c-f37f-4046-9d09-e58709af556c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Хозрасчетный</Name>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+		</Properties>
+		<ChildObjects/>
+	</ChartOfAccounts>
+</MetaDataObject>

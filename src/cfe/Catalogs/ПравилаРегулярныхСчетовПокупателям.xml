@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Catalog uuid="99518663-5db5-4f38-ba34-d9b0e84c9597">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.ПравилаРегулярныхСчетовПокупателям" category="Object">
+				<xr:TypeId>a848da1e-f6d2-48a2-9441-c366367ecd03</xr:TypeId>
+				<xr:ValueId>3cb5ea08-9020-4bb7-af40-9b8abad27b95</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.ПравилаРегулярныхСчетовПокупателям" category="Ref">
+				<xr:TypeId>9c684f13-72ee-49ea-ae6a-6d29de9cd4d9</xr:TypeId>
+				<xr:ValueId>c2340206-7095-4dff-b173-bf965519c315</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.ПравилаРегулярныхСчетовПокупателям" category="Selection">
+				<xr:TypeId>16681ccd-cb4e-4451-bf48-8430aff3e5f2</xr:TypeId>
+				<xr:ValueId>30da8aa6-9bbc-4d43-95f3-e0cf27d05dae</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.ПравилаРегулярныхСчетовПокупателям" category="List">
+				<xr:TypeId>ec25a434-d7c6-466b-b6a6-ef29b920a68d</xr:TypeId>
+				<xr:ValueId>60adc563-33f0-4a3a-9982-f3db71fc684d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.ПравилаРегулярныхСчетовПокупателям" category="Manager">
+				<xr:TypeId>f5db5e47-0f51-4690-82f8-924b1151c200</xr:TypeId>
+				<xr:ValueId>6e762754-64ec-4ccc-8b15-999faf3e75db</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПравилаРегулярныхСчетовПокупателям</Name>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+		</Properties>
+		<ChildObjects/>
+	</Catalog>
+</MetaDataObject>
