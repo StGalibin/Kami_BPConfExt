@@ -834,6 +834,9 @@
 											<Width>10</Width>
 											<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="49"/>
 											<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="197"/>
+											<Events>
+												<Event name="OnChange" callType="After">РасшСН_ТоварыЦенаПриИзмененииПосле</Event>
+											</Events>
 										</InputField>
 										<InputField name="ТоварыЦенаВХ" id="547">
 											<DataPath>Объект.Товары.ЦенаВХ</DataPath>
@@ -899,6 +902,9 @@
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыПроцентНаценкиКонтекстноеМеню" id="561"/>
 											<ExtendedTooltip name="ТоварыПроцентНаценкиРасширеннаяПодсказка" id="562"/>
+											<Events>
+												<Event name="OnChange" callType="Override">РасшСН_ТоварыПроцентНаценкиПриИзмененииВместо</Event>
+											</Events>
 										</InputField>
 										<InputField name="ТоварыСуммаНаценки" id="557">
 											<DataPath>Объект.Товары.СуммаНаценки</DataPath>
