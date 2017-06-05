@@ -165,6 +165,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWriteAtServer" callType="After">РасшСН_ПослеЗаписиНаСервереПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">РасшСН_ПриСозданииНаСервереПосле</Event>
 		<Event name="OnWriteAtServer" callType="After">РасшСН_ПриЗаписиНаСервереПосле</Event>
 	</Events>
