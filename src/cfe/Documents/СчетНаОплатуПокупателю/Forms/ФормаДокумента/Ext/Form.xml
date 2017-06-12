@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -545,6 +547,11 @@
 							<ContextMenu name="ПодразделениеОрганизацииКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="ПодразделениеОрганизацииExtendedTooltip" id="174"/>
 						</InputField>
+						<InputField name="Склад" id="569">
+							<DataPath>Склад</DataPath>
+							<ContextMenu name="СкладКонтекстноеМеню" id="570"/>
+							<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="571"/>
+						</InputField>
 						<LabelField name="ТоварыЦеныИВалюта" id="246">
 							<DataPath>ЦеныИВалюта</DataPath>
 							<TitleTextColor>style:FormBackColor</TitleTextColor>
@@ -833,17 +840,6 @@
 									</ToolTip>
 									<ExtendedTooltip name="ТоварыГруппаЦенаРасширеннаяПодсказка" id="546"/>
 									<ChildItems>
-										<InputField name="ТоварыЦена" id="48">
-											<DataPath>Объект.Товары.Цена</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>10</Width>
-											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-											<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="49"/>
-											<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="197"/>
-											<Events>
-												<Event name="OnChange" callType="After">РасшСН_ТоварыЦенаПриИзмененииПосле</Event>
-											</Events>
-										</InputField>
 										<InputField name="ТоварыЦенаВХ" id="547">
 											<DataPath>Объект.Товары.ЦенаВХ</DataPath>
 											<EditMode>EnterOnInput</EditMode>
@@ -852,6 +848,15 @@
 											<Events>
 												<Event name="OnChange" callType="Override">РасшСН_ТоварыЦенаВХПриИзмененииВместо</Event>
 											</Events>
+										</InputField>
+										<InputField name="ТоварыСуммаВХ" id="552">
+											<DataPath>Объект.Товары.СуммаВХ</DataPath>
+											<Enabled>false</Enabled>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<TextColor>style:ButtonBorderColor</TextColor>
+											<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="553"/>
+											<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="554"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -870,21 +875,23 @@
 									</ToolTip>
 									<ExtendedTooltip name="ТоварыГруппаСуммаРасширеннаяПодсказка" id="551"/>
 									<ChildItems>
+										<InputField name="ТоварыЦена" id="48">
+											<DataPath>Объект.Товары.Цена</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="197"/>
+											<Events>
+												<Event name="OnChange" callType="After">РасшСН_ТоварыЦенаПриИзмененииПосле</Event>
+											</Events>
+										</InputField>
 										<InputField name="ТоварыСумма" id="50">
 											<DataPath>Объект.Товары.Сумма</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
 											<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="51"/>
 											<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="198"/>
-										</InputField>
-										<InputField name="ТоварыСуммаВХ" id="552">
-											<DataPath>Объект.Товары.СуммаВХ</DataPath>
-											<Enabled>false</Enabled>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<TextColor>style:ButtonBorderColor</TextColor>
-											<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="553"/>
-											<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="554"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -1923,6 +1930,20 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.ПравилаРегулярныхСчетовПокупателям</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="Склад" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+			<Save>
+				<Field>Склад</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>

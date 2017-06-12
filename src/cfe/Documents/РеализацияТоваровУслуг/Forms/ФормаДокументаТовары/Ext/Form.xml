@@ -744,6 +744,41 @@
 						<Event name="OnChange" callType="After">РасшСН_ТоварыКоличествоПриИзмененииПосле</Event>
 					</Events>
 				</InputField>
+				<ColumnGroup name="ТоварыГруппаСумма" id="669">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары группа сумма</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары группа сумма</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТоварыГруппаСуммаРасширеннаяПодсказка" id="670"/>
+					<ChildItems>
+						<InputField name="ТоварыЦенаВХ" id="658">
+							<DataPath>Объект.Товары.ЦенаВХ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТоварыЦенаВХКонтекстноеМеню" id="659"/>
+							<ExtendedTooltip name="ТоварыЦенаВХРасширеннаяПодсказка" id="660"/>
+							<Events>
+								<Event name="OnChange" callType="Override">РасшСН_ТоварыЦенаВХПриИзмененииВместо</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТоварыСуммаВХ" id="671">
+							<DataPath>Объект.Товары.СуммаВХ</DataPath>
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<TextColor>style:ButtonBorderColor</TextColor>
+							<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="672"/>
+							<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="673"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 				<ColumnGroup name="ТоварыГруппаЦена" id="656">
 					<Title>
 						<v8:item>
@@ -770,47 +805,12 @@
 								<Event name="OnChange" callType="After">РасшСН_ТоварыЦенаПриИзмененииПосле</Event>
 							</Events>
 						</InputField>
-						<InputField name="ТоварыЦенаВХ" id="658">
-							<DataPath>Объект.Товары.ЦенаВХ</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ТоварыЦенаВХКонтекстноеМеню" id="659"/>
-							<ExtendedTooltip name="ТоварыЦенаВХРасширеннаяПодсказка" id="660"/>
-							<Events>
-								<Event name="OnChange" callType="Override">РасшСН_ТоварыЦенаВХПриИзмененииВместо</Event>
-							</Events>
-						</InputField>
-					</ChildItems>
-				</ColumnGroup>
-				<ColumnGroup name="ТоварыГруппаСумма" id="669">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Товары группа сумма</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Товары группа сумма</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ТоварыГруппаСуммаРасширеннаяПодсказка" id="670"/>
-					<ChildItems>
 						<InputField name="ТоварыСумма" id="83">
 							<DataPath>Объект.Товары.Сумма</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<Width>10</Width>
 							<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="444"/>
-						</InputField>
-						<InputField name="ТоварыСуммаВХ" id="671">
-							<DataPath>Объект.Товары.СуммаВХ</DataPath>
-							<Enabled>false</Enabled>
-							<ReadOnly>true</ReadOnly>
-							<EditMode>EnterOnInput</EditMode>
-							<TextColor>style:ButtonBorderColor</TextColor>
-							<ContextMenu name="ТоварыСуммаВХКонтекстноеМеню" id="672"/>
-							<ExtendedTooltip name="ТоварыСуммаВХРасширеннаяПодсказка" id="673"/>
 						</InputField>
 					</ChildItems>
 				</ColumnGroup>
